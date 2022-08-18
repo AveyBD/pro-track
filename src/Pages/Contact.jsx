@@ -1,13 +1,16 @@
 import Navbar from "../Components/Shared/Navbar";
 import image from "../images/contact.png";
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 
 const Contact = () => {
-
-  const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => {
-    console.log(data)
-  }
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    console.log(data);
+  };
   return (
     <div>
       <div className="bg-blue">
@@ -24,7 +27,11 @@ const Contact = () => {
           </p>
 
           <form onSubmit={handleSubmit(onSubmit)} className="mt-10">
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+            <input
+              type="hidden"
+              name="access_key"
+              value="YOUR_ACCESS_KEY_HERE"
+            />
             <div className="grid gap-6">
               <div className="relative z-0">
                 <input

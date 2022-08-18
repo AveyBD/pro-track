@@ -21,9 +21,6 @@ const Hero = () => {
           time it’s identified until you have resolved it.
         </p>
       </div>
-      <div className="mt-24">
-        <FeaturesSection />
-      </div>
     </section>
   );
 };

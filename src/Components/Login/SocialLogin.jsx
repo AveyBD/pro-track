@@ -9,7 +9,7 @@ const SocialLogin = () => {
         </div>
 
         <a
-          className="px-7 py-3 bg-blue text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
+          className="px-7 py-3 bg-blue-800 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3"
           href="/"
           role="button"
           data-mdb-ripple="true"
@@ -28,7 +28,7 @@ const SocialLogin = () => {
           Continue with Facebook
         </a>
         <a
-          className="px-7 bg-skyBlue py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center"
+          className="px-7 bg-blue-500 py-3 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center"
           href="/"
           role="button"
           data-mdb-ripple="true"

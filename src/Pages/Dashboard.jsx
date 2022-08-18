@@ -32,6 +32,9 @@ const Dashboard = () => {
             <li>
               <Link to="dashboard/teams"> My Teams</Link>
             </li>
+            <li>
+              <Link to="dashboard/taskPage"> My Teams</Link>
+            </li>
             {/* <li>
               <Link>Sidebar Item 2</Link>
             </li> */}

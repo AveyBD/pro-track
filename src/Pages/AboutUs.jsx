@@ -6,8 +6,8 @@ const AboutUs = () => {
   return (
     <div>
       <div className="bg-blue">
-          <Navbar/>
-          </div>
+        <Navbar />
+      </div>
       <div>
         <h1 className="text-3xl text-cyan-700 font-bold text-center m-24">
           About US

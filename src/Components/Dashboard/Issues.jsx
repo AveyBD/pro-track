@@ -15,7 +15,7 @@ const Issues = () => {
           <input type="text" name="" id="" placeholder="Enter First Name" />
           <br />
           <input
-            class="my-4"
+            className="my-4"
             type="text"
             name=""
             id=""

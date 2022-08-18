@@ -1,6 +1,11 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import Navbar from "../Shared/Navbar";
+import { GrProjects } from 'react-icons/gr';
+import { BiTask } from 'react-icons/bi';
+import { AiTwotoneCalendar } from 'react-icons/ai';
+import { MdOutlineMeetingRoom } from 'react-icons/md';
+import DashboardNav from "./DashboardNav";
 
 const DashboardHome = () => {
   return (
@@ -9,8 +14,8 @@ const DashboardHome = () => {
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
           {/* <!-- Page content here --> */}
-          <div className="bg-seaBlue">
-          <Navbar/>
+          <div>
+            <DashboardNav/>
           </div>
           <Outlet />
           <label
@@ -20,32 +25,91 @@ const DashboardHome = () => {
             Open drawer
           </label>
         </div>
-        <div className="drawer-side ">
+        <div className="drawer-side">
           <label for="my-drawer-2" className="drawer-overlay"></label>
-          <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+          
+          <ul className="menu p-4 overflow-y-auto w-72 bg-base-100 text-base-content bg-background">
+
             {/* <!-- Sidebar content here --> */}
-            <li>
-              <Link to="/">Home</Link>
+            <li class="px-5 hidden md:block">
+              <div class="flex flex-row items-center h-8">
+                <div class="text-sm font-light tracking-wide text-gray-400 uppercase">Main</div>
+              </div>
+            </li>
+            <li >
+              <Link to="/dashboard" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-zinc-200 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-green-500 dark:hover:border-gray-800 pr-6">
+                <span class="inline-flex justify-center items-center ml-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                </span>
+                <span class="ml-2 text-sm tracking-wide truncate">Dashboard</span>
+              </Link>
             </li>
             <li>
-              <Link to="/dashboard/projects">Projects</Link>
+              <Link to="/dashboard/projects" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-zinc-200 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-green-500 dark:hover:border-gray-800 pr-6">
+                <span class="inline-flex justify-center items-center ml-4">
+                  <GrProjects/>
+                </span>
+                <span class="ml-2 text-sm tracking-wide truncate">Projects</span>
+                <span class="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-green-500 bg-indigo-50 rounded-full">New</span>
+              </Link>
             </li>
-        
             <li>
-              <Link to="/dashboard/tasks">My Tasks</Link>
+              <Link to="/dashboard/tasks" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-zinc-200 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-green-500 dark:hover:border-gray-800 pr-6">
+                <span class="inline-flex justify-center items-center ml-4">
+                  <BiTask className="w-5 h-5"/>
+                </span>
+                <span class="ml-2 text-sm tracking-wide truncate">My Tasks</span>
+              </Link>
             </li>
             <li>
-              <Link to="/dashboard/calender">Calender</Link>
+              <Link to="/dashboard/calender" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-zinc-200 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-green-500 dark:hover:border-gray-800 pr-6">
+                <span class="inline-flex justify-center items-center ml-4">
+                 <AiTwotoneCalendar className="w-5 h-5"/>
+                </span>
+                <span class="ml-2 text-sm tracking-wide truncate">Calender</span>
+                <span class="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">1.2k</span>
+              </Link>
             </li>
             <li>
-              <Link to="/dashboard/meetings">Meetings</Link>
+              <Link to="/dashboard/meetings" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-zinc-200 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-green-500 dark:hover:border-gray-800 pr-6">
+                <span class="inline-flex justify-center items-center ml-4">
+                 <MdOutlineMeetingRoom className="w-5 h-5"/>
+                </span>
+                <span class="ml-2 text-sm tracking-wide truncate">Meetings</span>
+                <span class="hidden md:block px-2 py-0.5 ml-auto text-xs font-medium tracking-wide text-red-500 bg-red-50 rounded-full">1.2k</span>
+              </Link>
+            </li>
+            <li class="px-5 hidden md:block">
+              <div class="flex flex-row items-center mt-5 h-8">
+                <div class="text-sm font-light tracking-wide text-gray-400 uppercase">Settings</div>
+              </div>
+            </li>
+            <li>
+              <a href="#" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-zinc-200 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-green-500 dark:hover:border-gray-800 pr-6">
+                <span class="inline-flex justify-center items-center ml-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                </span>
+                <span class="ml-2 text-sm tracking-wide truncate">Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-zinc-200 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 border-l-4 border-transparent hover:border-green-500 dark:hover:border-gray-800 pr-6">
+                <span class="inline-flex justify-center items-center ml-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                </span>
+                <span class="ml-2 text-sm tracking-wide truncate">Settings</span>
+              </a>
+            </li>
+            <li>
+              <Link to="/dashboard/feedbacks">Feedback</Link>
             </li>
             {/* <li>
               <Link to="/dashboard/issues">Issues</Link>
             </li>
-            <li>
-              <Link to="/dashboard/feedbacks">Feedbacks</Link>
-            </li>
+            
             <li>
               <Link to="/dashboard/files">Company's Files</Link>
             </li> */}

@@ -10,6 +10,7 @@ import Issues from "./Components/Dashboard/Issues";
 import Meetings from "./Components/Dashboard/Meetings";
 import MyTasks from "./Components/Dashboard/MyTasks";
 import Projects from "./Components/Dashboard/Projects";
+import TaskPage from "./Components/Dashboard/TaskPage";
 import Footer from "./Components/Shared/Footer";
 import Navbar from "./Components/Shared/Navbar";
 import AboutUs from "./Pages/AboutUs";
@@ -30,6 +31,8 @@ function App() {
             <Route index element={<DashWelcome></DashWelcome>}></Route>
             <Route path="projects" element={<Projects></Projects>}></Route>
             <Route path="tasks" element={<MyTasks></MyTasks>}></Route>
+            <Route path="taskPage/:id" element={<TaskPage />} />
+            {/* <Route path="taskPage" element={<TaskPage />} /> */}
             <Route path="login" element={<Login />}></Route>
             <Route path="issues" element={<Issues />}></Route>
             <Route path="calender" element={<Calender />}></Route>
