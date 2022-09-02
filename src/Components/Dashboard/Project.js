@@ -5,9 +5,8 @@ import { AiTwotoneDelete } from 'react-icons/ai';
 const Project = ({ project, handleDelete }) => {
   const { about, owner, projectTitle, startDate, endDate, team, email, _id } = project;
 
-  const navigate = useNavigate();
-  const navigateToTask = id => {
-    navigate(`/dashboard/taskPage/${id}`)
+  if (isLoading) {
+    return <Loading />;
   }
   
   return (
@@ -34,8 +33,8 @@ const Project = ({ project, handleDelete }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default Project;
+export default Projects;

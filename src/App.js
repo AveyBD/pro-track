@@ -21,6 +21,7 @@ import RequireAuth from "./Components/Shared/RequireAuth";
 import AboutUs from "./Pages/AboutUs";
 import Admin from "./Pages/Admin";
 import Contact from "./Pages/Contact";
+import Customers from "./Pages/Customers";
 
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
@@ -32,6 +33,7 @@ function App() {
       <div>
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/customers" element={<Customers></Customers>}></Route>
           <Route path="/about" element={<AboutUs />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -67,6 +69,7 @@ function App() {
             <Route path="feedbacks" element={<Feedback></Feedback>}></Route>
             <Route path="inbox" element={<Inbox/>}></Route>
             <Route path="files" element={<Files></Files>}></Route>
+            <Route path="profile" element={<Profile></Profile>}></Route>
           </Route>
         </Routes>
       </div>

@@ -3,6 +3,7 @@ import getDay from "date-fns/getDay";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
 import React, { useState } from "react";
+import { useEffect } from "react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import DatePicker from "react-datepicker";
@@ -39,6 +40,14 @@ const events = [
 ];
 
 function App() {
+  const [events, setEvent] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/mycelander.json").then((res) =>
+      res.json().then((data) => setEvent(data))
+    );
+  });
+
   const [newEvent, setNewEvent] = useState({ title: "", start: "", end: "" });
   const [allEvents, setAllEvents] = useState(events);
 
